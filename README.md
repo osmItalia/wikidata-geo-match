@@ -25,4 +25,4 @@ PHP application which queries the database and shows entries, classified by thei
 License
 ------
 
-This project (except the assets folder containing third party code), whe is released under WTFPL.
+This project (except the assets folder containing third party code), is released under WTFPL.
