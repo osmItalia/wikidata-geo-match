@@ -1,0 +1,6 @@
+{
+    "require": {
+        "jeroen/json-dump-reader": "~1.0",
+        "league/geotools": "@stable"
+    }
+}
