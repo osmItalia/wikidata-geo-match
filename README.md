@@ -10,12 +10,12 @@ Server
 ----
 Steps:
 
-1. Database: pgsql with postgis extensions, with wikidata tag in the hstore column `tags`
-2. Run `0_create_wikidata_table.sql` to add tables to the osmosis database
-2. Osmosis replication
-3. Setup weekly cronjob for Wikidata dump download (`0_weekly_download.sh`), dump will be downloaded in /srv/wikidata/dump/
-4. Setup cronjob to refresh the views after Osmosis applies the diff to database (`4_update_data.sh`)
-5. Change the bounding box in scripts/stdin_to_JSON_polygon.php (defaults to Italy)
+1. Database: osm2pgsql with postgis extensions, with wikidata tag in the hstore column `tags`
+2. Import `scripts/sql/0_create_wikidata_table.sql` to add tables to the osmosis database
+2. Setup osmosis replication
+3. Setup weekly cronjob for Wikidata dump download (`scripts/0_weekly_download.sh`), dump will be downloaded in /srv/wikidata/dump/
+4. Setup cronjob to refresh the views after Osmosis applies the diff to database (`scripts/4_update_data.sh`)
+5. Change the bounding box in `scripts/stdin_to_JSON_polygon.php` (defaults to Italy)
 6. Run `composer update` both in html and scripts folder
 
 Client
